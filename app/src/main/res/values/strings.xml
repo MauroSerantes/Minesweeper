@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Minesweeper</string>
+    <string name="one_mine">1</string>
+    <string name="two_mine">2</string>
+    <string name="three_mine">3</string>
+    <string name="four_mine">4</string>
+    <string name="five_mine">5</string>
+    <string name="six_mine">6</string>
+    <string name="seven_mine">7</string>
+    <string name="eight_mine">8</string>
+</resources>
