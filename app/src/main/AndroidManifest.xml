@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Minesweeper"
         tools:targetApi="34">
         <activity
-            android:name="com.myapps.minesweeper.gui.MinesweeperBeginner"
+            android:name=".gui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
+        </activity>
+
+        <activity
+            android:name=".gui.MinesweeperBeginner"
+            android:exported="false">
         </activity>
     </application>
 

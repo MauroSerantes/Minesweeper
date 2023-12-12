@@ -8,4 +8,21 @@
     <string name="six_mine">6</string>
     <string name="seven_mine">7</string>
     <string name="eight_mine">8</string>
+
+
+    <string name="minesweeper_title">MINESWEEPER</string>
+    <string name="play">PLAY</string>
+
+    <string name="beginner">BEGINNER</string>
+    <string name="medium">MEDIUM</string>
+    <string name="advanced">ADVANCED</string>
+
+
+    <string name="reset_button">RESET</string>
+    <string name="amount_of_mines">00</string>
+
+
+    <string name="game_win">WINNER</string>
+    <string name="game_lose">LOSER</string>
+
 </resources>

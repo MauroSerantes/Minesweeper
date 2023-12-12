@@ -1,6 +1,6 @@
-package com.myapps.minesweeper.principalClasses
+package com.myapps.minesweeper.principalclasses
 
-import com.myapps.minesweeper.auxiliarStructures.Matrix
+import com.myapps.minesweeper.auxiliarstructures.Matrix
 
 class MinesweeperBoard(amountOfMines:Int,amountOfRows:Int,amountOfColumns:Int){
     private val cells: Matrix<MinesweeperCell> = Matrix(amountOfRows,amountOfColumns)
@@ -18,7 +18,7 @@ class MinesweeperBoard(amountOfMines:Int,amountOfRows:Int,amountOfColumns:Int){
         while(auxMinesCount!=0){
             val i = (0..<amountOfRows).random()
             val j = (0..<amountOfColumns).random()
-            val msCell = cells.getElementByPosition(i,j)
+            val msCell:MinesweeperCell? = cells.getElementByPosition(i,j)
             if(msCell?.isMine()!!.not()){
                 msCell.setMine()
                 auxMinesCount -=1
@@ -42,17 +42,22 @@ class MinesweeperBoard(amountOfMines:Int,amountOfRows:Int,amountOfColumns:Int){
         var allRevealed = true
         while (i<cells.getRows() && allRevealed){
 
+            j = 0
             while(j<cells.getColumns() && allRevealed){
                val cell =  cells.getElementByPosition(i,j)
 
-                if(!cell?.isRevealed()!! && !cell?.isMine()!!){
+                if(!cell?.isRevealed()!! && !cell.isMine()){
                     allRevealed = false
                 }
+
+                j++
             }
 
+            i++
         }
         return allRevealed
     }
+
 
     fun resetBoard(){
         for(i in 0..<cells.getRows()){
@@ -62,7 +67,8 @@ class MinesweeperBoard(amountOfMines:Int,amountOfRows:Int,amountOfColumns:Int){
             }
         }
 
-        var  auxMinesCount = amountOfMines
+        var auxMinesCount = amountOfMines
+
         while(auxMinesCount!=0){
             val i = (0..<cells.getRows()).random()
             val j = (0..<cells.getColumns()).random()
@@ -80,5 +86,4 @@ class MinesweeperBoard(amountOfMines:Int,amountOfRows:Int,amountOfColumns:Int){
             }
         }
     }
-
 }

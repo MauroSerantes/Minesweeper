@@ -1,18 +1,13 @@
-package com.myapps.minesweeper.auxiliarStructures
+package com.myapps.minesweeper.auxiliarstructures
 
-class Matrix<T>(amountOfRows:Int,amountOfColumns:Int) {
+class Matrix<T>(private var rows:Int, private var columns:Int) {
 
     private var matrix:MutableList<T?>?
-    private var rows:Int
-    private var columns:Int
 
     init {
-        if(amountOfRows>=0 && amountOfColumns>=0){
-            rows = amountOfRows
-            columns = amountOfColumns
+        if(rows>=0 && columns>=0){
             val totalSize = rows*columns
-            matrix = MutableList(totalSize){index -> null}
-
+            matrix = MutableList(totalSize){null}
         }
         else{
             rows = 0
@@ -21,9 +16,9 @@ class Matrix<T>(amountOfRows:Int,amountOfColumns:Int) {
         }
     }
 
-    fun getRows():Int{return rows}
+    fun getRows():Int = rows
 
-    fun getColumns():Int{return columns}
+    fun getColumns():Int = columns
 
     fun insertElement(element:T,rowIndex:Int,columnIndex:Int){
         if(rowIndex in 0..<rows &&  columnIndex in 0..<columns){
@@ -35,7 +30,7 @@ class Matrix<T>(amountOfRows:Int,amountOfColumns:Int) {
     fun getElementByPosition(rowIndex: Int,columnIndex: Int):T?{
         if( rowIndex in 0..<rows  && columnIndex in 0..<columns){
             val index = rowIndex * columns + columnIndex
-            return matrix?.get(index)
+            return matrix?.get(index)!!
         }
         return null
     }
@@ -43,16 +38,16 @@ class Matrix<T>(amountOfRows:Int,amountOfColumns:Int) {
     fun addRow(){
        rows += 1
        val newSizeArray = rows*columns
-       val array = MutableList<T?>(newSizeArray){index -> null}
-        System.arraycopy(matrix,0,array,0,newSizeArray-columns)
+       val array = MutableList<T?>(newSizeArray){null}
+        System.arraycopy(matrix as MutableList,0,array,0,newSizeArray-columns)
         matrix = array
     }
 
     fun addColumn(){
        columns += 1
         val newSizeArray = rows*columns
-        val array = MutableList<T?>(newSizeArray){index -> null}
-        System.arraycopy(matrix,0,array,0,newSizeArray-rows)
+        val array = MutableList<T?>(newSizeArray){null}
+        System.arraycopy(matrix as MutableList,0,array,0,newSizeArray-rows)
         matrix = array
 
         for (i in rows - 1 downTo 0) {
@@ -65,9 +60,7 @@ class Matrix<T>(amountOfRows:Int,amountOfColumns:Int) {
     }
 
     fun deleteRow(rowIndex:Int):Boolean{
-        var rowWasDeleted = false
-
-        if (rowIndex < 0 || rowIndex >= rows) return rowWasDeleted
+        if (rowIndex < 0 || rowIndex >= rows) return false
 
         val initialIndex: Int = columns * (rowIndex + 1)
         val totalCapacity = rows * columns
@@ -77,18 +70,15 @@ class Matrix<T>(amountOfRows:Int,amountOfColumns:Int) {
         }
 
         rows -= 1
-        val array = MutableList<T?>(totalCapacity - columns){index -> null}
-        System.arraycopy(matrix, 0, array, 0, totalCapacity - columns)
+        val array = MutableList<T?>(totalCapacity - columns){null}
+        System.arraycopy(matrix as MutableList, 0, array, 0, totalCapacity - columns)
         matrix = array
-        rowWasDeleted = true
 
-        return rowWasDeleted
+        return true
     }
 
     fun deleteColumn(columnIndex: Int):Boolean{
-        var columnWasDeleted = false
-
-        if (columnIndex < 0 || columnIndex >= columns) return columnWasDeleted
+        if (columnIndex < 0 || columnIndex >= columns) return false
 
         for (i in 0 until rows) {
             var index: Int = i * (columns + columnIndex) + 1
@@ -100,11 +90,10 @@ class Matrix<T>(amountOfRows:Int,amountOfColumns:Int) {
 
         columns -= 1
         val newSize = rows * columns
-        val array = MutableList<T?>(newSize){index -> null}
-        System.arraycopy(matrix, 0, array, 0, newSize)
-        columnWasDeleted = true
+        val array = MutableList<T>(newSize){null!!}
+        System.arraycopy(matrix as MutableList, 0, array, 0, newSize)
 
-        return columnWasDeleted
+        return true
     }
 
     fun <R> traverse(matrixDo: MatrixTraverseDo<T, R>, contextVariable:R){

@@ -7,11 +7,25 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="red">#FD0000</color>
     <color name="transparent_white">#00FF0000</color>
 
     <color name="background_color">#90EE90</color>
     <color name="background_selection_button">#808080</color>
     <color name="background_button">#C2C2C2</color>
+
+
+    <!-- this is for the color of the presentation fragment-->
+
+    <color name="yellow">#FFBF00</color>
+    <color name="orange">#F46B40</color>
+    <color name="red">#FD0000</color>
+    <color name="purple">#975EFD</color>
+    <color name="blue">#1834CC</color>
+    <color name="green">#26AC17</color>
+
+    <!-- this is for the background of presentation-->
+
+    <color name="transparent_black">#6B000000</color>
+
 
 </resources>

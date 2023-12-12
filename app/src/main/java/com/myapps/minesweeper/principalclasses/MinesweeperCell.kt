@@ -1,6 +1,6 @@
-package com.myapps.minesweeper.principalClasses
+package com.myapps.minesweeper.principalclasses
 
-import com.myapps.minesweeper.auxiliarStructures.Matrix
+import com.myapps.minesweeper.auxiliarstructures.Matrix
 
 
 class MinesweeperCell(associatedMatrix: Matrix<MinesweeperCell>, rowId:Int, columnId:Int){
@@ -41,13 +41,13 @@ class MinesweeperCell(associatedMatrix: Matrix<MinesweeperCell>, rowId:Int, colu
         isMine = !isMine
     }
 
-    fun amountOfAroundMines():Int?{return minesCount}
+    fun amountOfAroundMines():Int = minesCount
 
-    fun isMarked():Boolean?{return isMarked}
+    fun isMarked():Boolean = isMarked
 
-    fun isMine():Boolean?{return isMine}
+    fun isMine():Boolean = isMine
 
-    fun isRevealed():Boolean?{return isRevealed}
+    fun isRevealed():Boolean = isRevealed
 
     fun updateAroundMinesCount(){
         val fromRow = if(rowIndexLocation>0){ rowIndexLocation-1 }
@@ -73,7 +73,7 @@ class MinesweeperCell(associatedMatrix: Matrix<MinesweeperCell>, rowId:Int, colu
     }
 
 
-    fun revealedAroundCells(){
+    private fun revealedAroundCells(){
         val fromRow = if(rowIndexLocation>0){ rowIndexLocation-1 }
         else 0
 
