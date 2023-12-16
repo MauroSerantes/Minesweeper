@@ -1,5 +1,6 @@
 This is a personal implementation of the game minesweeper for android. 
 
+
 I make big changes on the UI : 
 
 .Addition of a presentation screen
