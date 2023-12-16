@@ -19,3 +19,4 @@ My next steps on this game will be:
 
 
 I will continue uploading all the modifications that I do.
+This game is not finished.
