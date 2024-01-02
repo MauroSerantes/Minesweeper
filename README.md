@@ -1,14 +1,12 @@
 # Minesweeper Game
 
-This is a the well know game minesweeper for android. This is a personal version of the game.
+_This is a the well know game minesweeper for android. This is a personal version of the game._
 
-## Comenzando 🚀
   
-
 ### About the game 📋
 
-The main objective of the game is to clear the board without detonating any mines, with help from clues about the number of neighboring mines in each field.
-The game count with three different levels of difficulties:
+_The main objective of the game is to clear the board without detonating any mines, with help from clues about the number of neighboring mines in each field._
+_The game count with three different levels of difficulties:_
 
 ```
 BEGGINER (96 tiles and 20 mines)
@@ -24,8 +22,7 @@ ADVANCED (160 tiles and 40 mines)
 ![Screenshot_20240102-112919_Minesweeper](https://github.com/MauroSerantes/Minesweeper/assets/146656323/7cf8288c-a2df-47ed-a339-0e3e61fcf594)
 
 
-
-### Instructions for play 🔧
+### Instructions for play 
 
 _The main game includes three command buttons: Reset Button, Dig Mode Button (Shovel), Flag Mode Button (Flag)._
 
@@ -39,64 +36,25 @@ _When Flag Mode is activate you can mark or dismark any cell with a flag (The nu
 ![Screenshot_20240102-113049_Minesweeper](https://github.com/MauroSerantes/Minesweeper/assets/146656323/79ec230b-7d16-43d8-83c2-cf3e5ce4e48e)
 
 
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
-## Ejecutando las pruebas ⚙️
+## Tech Stack Used And Architectural pattern ⚙️
 
-_Explica como ejecutar las pruebas automatizadas para este sistema_
+* Xml (eXtensible Markup Language) - For the views
+* Navigation Component - For simple navigation between fragments
+* MVP(Model-View-Presenter) - Main Architecture pattern
+* Kotlin - The main language
 
-### Analice las pruebas end-to-end 🔩
+### Personal Commentaries
+I use MVP architecture with the finality of separate the logic of the game from the view.
+With the use of MVP I create a main game presenter wich controlls all the logic of the game when
+the main view (Game Fragment) just show all user interactions.
 
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-## Despliegue 📦
-
-_Agrega notas adicionales sobre como hacer deploy_
-
-## Construido con 🛠️
-
-_Menciona las herramientas que utilizaste para crear tu proyecto_
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
-
-## Contribuyendo 🖇️
-
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
-## Wiki 📖
-
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
-
-## Versionado 📌
-
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
+In the domain file there are some auxiliar classes and structures for made the game more
+simple to implement. These code is one of the multiple ways of implement the game.
 
 ## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+* **Mauro Serantes** - *Trabajo Inicial* - [Mauro Serantes](https://github.com/MauroSerantes)
 
 ## Expresiones de Gratitud 🎁
 
