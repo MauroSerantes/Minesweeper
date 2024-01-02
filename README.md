@@ -27,9 +27,9 @@ ADVANCED (160 tiles and 40 mines)
 
 ### Instructions for play 🔧
 
-_The main game includes three command buttons: Reset Button, Dig Mode Button (Shovel), Flag Mode Button (Flag)._
-When Dig Mode is activate you can reveal any cell exept the ones that are marked by a flag.
-When Flag Mode is activate you can mark or dismark any cell with a flag (The number of flags is equal to the total number of mines)
+_The main game includes three command buttons: Reset Button, Dig Mode Button (Shovel), Flag Mode Button (Flag)._\n
+_When Dig Mode is activate you can reveal any cell exept the ones that are marked by a flag._
+_When Flag Mode is activate you can mark or dismark any cell with a flag (The number of flags is equal to the total number of mines)_
 
 #### Here some screeshots of the main game
 
