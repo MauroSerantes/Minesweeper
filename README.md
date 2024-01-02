@@ -5,11 +5,10 @@ This is a the well know game minesweeper for android. This is a personal version
 ## Comenzando 🚀
   
 
+### Instructions for play 📋
 
-
-### Pre-requisitos 📋
-
-_Que cosas necesitas para instalar el software y como instalarlas_
+The main objective of the game is to clear the board without detonating any mines, with help from clues about the number of neighboring mines in each field.
+The game count with three different levels of difficulties:
 
 ```
 Da un ejemplo
