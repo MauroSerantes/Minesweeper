@@ -52,7 +52,7 @@ the main view (Game Fragment) just show all user interactions.
 In the domain file there are some auxiliar classes and structures for made the game more
 simple to implement. These code is one of the multiple ways of implement the game.
 
-## Autores ✒️
+## Authors ✒️
 
 * **Mauro Serantes** - *Trabajo Inicial* - [Mauro Serantes](https://github.com/MauroSerantes)
 
@@ -64,6 +64,3 @@ simple to implement. These code is one of the multiple ways of implement the gam
 
 
 
-
----
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
