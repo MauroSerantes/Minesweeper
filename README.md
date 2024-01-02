@@ -3,7 +3,7 @@
 This is a the well know game minesweeper for android. This is a personal version of the game.
 
 ## Comenzando 🚀
-
+  
 
 
 
