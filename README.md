@@ -54,7 +54,7 @@ _simple to implement. These code is one of the multiple ways of implement the ga
 
 ## Authors ✒️
 
-* **Mauro Serantes** - *Trabajo Inicial* - [Mauro Serantes](https://github.com/MauroSerantes)
+* **Mauro Serantes** - [Mauro Serantes](https://github.com/MauroSerantes)
 
 ## For The Future
 
