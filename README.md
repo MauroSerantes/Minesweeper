@@ -27,18 +27,17 @@ ADVANCED (160 tiles and 40 mines)
 
 ### Instructions for play 🔧
 
-_The main game includes three command buttons: Reset Button, Dig Mode Button (Shovel), Flag Mode Button (Flag)._\n
+_The main game includes three command buttons: Reset Button, Dig Mode Button (Shovel), Flag Mode Button (Flag).
+
 _When Dig Mode is activate you can reveal any cell exept the ones that are marked by a flag._
+
 _When Flag Mode is activate you can mark or dismark any cell with a flag (The number of flags is equal to the total number of mines)_
 
 #### Here some screeshots of the main game
 
+![Screenshot_20240102-112942_Minesweeper](https://github.com/MauroSerantes/Minesweeper/assets/146656323/1dc9d177-4ffd-4b13-b1d8-8708346e6293)
+![Screenshot_20240102-113049_Minesweeper](https://github.com/MauroSerantes/Minesweeper/assets/146656323/79ec230b-7d16-43d8-83c2-cf3e5ce4e48e)
 
-_Y repite_
-
-```
-hasta finalizar
-```
 
 _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
 
