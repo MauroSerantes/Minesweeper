@@ -5,7 +5,7 @@ This is a the well know game minesweeper for android. This is a personal version
 ## Comenzando 🚀
   
 
-### Instructions for play 📋
+### About the game 📋
 
 The main objective of the game is to clear the board without detonating any mines, with help from clues about the number of neighboring mines in each field.
 The game count with three different levels of difficulties:
@@ -25,15 +25,16 @@ ADVANCED (160 tiles and 40 mines)
 
 
 
-### Instalación 🔧
+### Instructions for play 🔧
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
+The main game includes three command buttons: Reset Button, Dig Mode Button (Shovel), Flag Mode Button (Flag).
+When Dig Mode is activate you can reveal any cell exept the ones that are marked by a flag.
+When Flag Mode is activate you can mark or dismark any cell with a flag (The number of flags is equal to the total number of mines)
 
-_Dí cómo será ese paso_
+#### Here some screeshots of the main game
+![Screenshot_20240102-113049_Minesweeper](https://github.com/MauroSerantes/Minesweeper/assets/146656323/d5d147e6-f0d2-46e9-89da-76a9ecf2df0e)
+![Screenshot_20240102-112942_Minesweeper](https://github.com/MauroSerantes/Minesweeper/assets/146656323/daa07419-9e95-46ff-88d3-70f4ac2ed9bf)
 
-```
-Da un ejemplo
-```
 
 _Y repite_
 
