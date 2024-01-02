@@ -45,12 +45,12 @@ _When Flag Mode is activate you can mark or dismark any cell with a flag (The nu
 * Kotlin - The main language
 
 ### Personal Commentaries
-I use MVP architecture with the finality of separate the logic of the game from the view.
-With the use of MVP I create a main game presenter wich controlls all the logic of the game when
-the main view (Game Fragment) just show all user interactions.
+_I use MVP architecture with the finality of separate the logic of the game from the view._
+_With the use of MVP I create a main game presenter wich controlls all the logic of the game when_
+_the main view (Game Fragment) just show all user interactions._
 
-In the domain file there are some auxiliar classes and structures for made the game more
-simple to implement. These code is one of the multiple ways of implement the game.
+_In the domain file there are some auxiliar classes and structures for made the game more_
+_simple to implement. These code is one of the multiple ways of implement the game._
 
 ## Authors ✒️
 
