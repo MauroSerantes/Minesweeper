@@ -56,13 +56,12 @@ simple to implement. These code is one of the multiple ways of implement the gam
 
 * **Mauro Serantes** - *Trabajo Inicial* - [Mauro Serantes](https://github.com/MauroSerantes)
 
-## Expresiones de Gratitud 🎁
+## For The Future
 
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* Dona con cripto a esta dirección: `0xf253fc233333078436d111175e5a76a649890000`
-* etc.
+* Add a timer
+* Add an online mode
+* Improve the UI
+
 
 
 
