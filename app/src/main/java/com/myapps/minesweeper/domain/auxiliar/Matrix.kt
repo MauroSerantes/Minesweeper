@@ -1,21 +1,17 @@
-package com.myapps.minesweeper.auxiliarstructures
+package com.myapps.minesweeper.domain.auxiliar
 
 class Matrix<T>(private var rows:Int, private var columns:Int) {
 
     private var matrix:MutableList<T?>?
 
     init {
-        if(rows>=0 && columns>=0){
+        matrix = if(rows >= 0 && columns >= 0){
             val totalSize = rows*columns
-            matrix = MutableList(totalSize){null}
-        }
-        else{
-            rows = 0
-            columns = 0
-            matrix = null
+            MutableList(totalSize){null}
+        } else{
+            null
         }
     }
-
     fun getRows():Int = rows
 
     fun getColumns():Int = columns
@@ -23,14 +19,14 @@ class Matrix<T>(private var rows:Int, private var columns:Int) {
     fun insertElement(element:T,rowIndex:Int,columnIndex:Int){
         if(rowIndex in 0..<rows &&  columnIndex in 0..<columns){
             val index = rowIndex * columns + columnIndex
-            matrix?.set(index,element)
+            matrix?.set(index, element)
         }
     }
 
     fun getElementByPosition(rowIndex: Int,columnIndex: Int):T?{
-        if( rowIndex in 0..<rows  && columnIndex in 0..<columns){
-            val index = rowIndex * columns + columnIndex
-            return matrix?.get(index)!!
+        if(rowIndex in 0..<rows  && columnIndex in 0..<columns){
+            val index = rowIndex * columns+ columnIndex
+            return matrix?.get(index)
         }
         return null
     }
@@ -66,7 +62,7 @@ class Matrix<T>(private var rows:Int, private var columns:Int) {
         val totalCapacity = rows * columns
 
         for (i in initialIndex until totalCapacity) {
-            matrix!![i-columns] = matrix!![i]
+            matrix?.set(i-columns, matrix!![i])
         }
 
         rows -= 1
@@ -83,24 +79,24 @@ class Matrix<T>(private var rows:Int, private var columns:Int) {
         for (i in 0 until rows) {
             var index: Int = i * (columns + columnIndex) + 1
             while (index < index + columns && index < rows * columns) {
-                matrix!![index - (i+1)] = matrix!![index]
+                matrix?.set(index - (i+1), matrix!![index])
                 index++
             }
         }
 
         columns -= 1
         val newSize = rows * columns
-        val array = MutableList<T>(newSize){null!!}
+        val array = MutableList<T?>(newSize){null}
         System.arraycopy(matrix as MutableList, 0, array, 0, newSize)
 
         return true
     }
 
-    fun <R> traverse(matrixDo: MatrixTraverseDo<T, R>, contextVariable:R){
+    fun <R> traverse(matrixDo: MatrixTraverseDo<T,R>, contextVariable:R ?= null){
         for(i in 0..<rows){
             for(j in 0..<columns){
 
-                matrixDo.matrixDo(this.getElementByPosition(i,j)!!,i,j,contextVariable)
+                matrixDo.matrixDo(this.getElementByPosition(i,j),i,j,contextVariable)
 
             }
         }

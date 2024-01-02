@@ -1,4 +1,4 @@
-package com.myapps.minesweeper.gui
+package com.myapps.minesweeper.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.gameFragment
             )
         )
-
+        supportActionBar?.hide()
         setupActionBarWithNavController(navController,appBarConfiguration)
     }
 
@@ -38,5 +38,4 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         _binding = null
     }
-
 }

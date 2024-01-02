@@ -1,50 +1,72 @@
-package com.myapps.minesweeper.principalclasses
+package com.myapps.minesweeper.domain.principal
 
-import com.myapps.minesweeper.auxiliarstructures.Matrix
+import com.myapps.minesweeper.domain.auxiliar.Matrix
 
-class MinesweeperBoard(amountOfMines:Int,amountOfRows:Int,amountOfColumns:Int){
+
+class MinesweeperBoard(private val amountOfMines:Int,amountOfRows:Int,amountOfColumns:Int){
+
     private val cells: Matrix<MinesweeperCell> = Matrix(amountOfRows,amountOfColumns)
-    private var amountOfMines:Int = amountOfMines
 
     init {
-        var auxMinesCount = amountOfMines
 
         for(i in 0..<amountOfRows){
             for(j in 0..<amountOfColumns){
-                val cell: MinesweeperCell = MinesweeperCell(cells,i,j)
+                MinesweeperCell(cells,i,j)
             }
         }
+       /*
+        cells.traverse(
+            {_,rowIndex,columnIndex,_-> MinesweeperCell(cells,rowIndex,columnIndex) }
+            ,null)*/
+
+
+
+        //init the board mines
+
+        var auxMinesCount = amountOfMines
 
         while(auxMinesCount!=0){
             val i = (0..<amountOfRows).random()
             val j = (0..<amountOfColumns).random()
-            val msCell:MinesweeperCell? = cells.getElementByPosition(i,j)
+            val msCell: MinesweeperCell? = cells.getElementByPosition(i,j)
             if(msCell?.isMine()!!.not()){
                 msCell.setMine()
                 auxMinesCount -=1
             }
         }
 
+        //update number count of mines in each cell
+
         for(i in 0..<amountOfRows){
             for(j in 0..<amountOfColumns){
                 cells.getElementByPosition(i,j)?.updateAroundMinesCount()
             }
         }
+         /*
+        cells.traverse(
+            { element, _, _, _ -> element?.updateAroundMinesCount()}
+            ,null)*/
+
     }
 
     fun getMineSweeperCell(rowId: Int,columnId: Int): MinesweeperCell {
         return cells.getElementByPosition(rowId,columnId)!!
     }
 
+    fun getRows():Int = cells.getRows()
+
+    fun getColumns():Int = cells.getColumns()
+
     fun allNonMinesCellsRevealed():Boolean{
         var i = 0
-        var j = 0
+        var j: Int
         var allRevealed = true
-        while (i<cells.getRows() && allRevealed){
+        while (i<cells.getRows()){
 
             j = 0
             while(j<cells.getColumns() && allRevealed){
-               val cell =  cells.getElementByPosition(i,j)
+
+                val cell =  cells.getElementByPosition(i,j)
 
                 if(!cell?.isRevealed()!! && !cell.isMine()){
                     allRevealed = false
@@ -53,8 +75,12 @@ class MinesweeperBoard(amountOfMines:Int,amountOfRows:Int,amountOfColumns:Int){
                 j++
             }
 
-            i++
+            i = if(!allRevealed){ cells.getRows()}
+            else{
+                i+1
+            }
         }
+
         return allRevealed
     }
 
@@ -66,6 +92,11 @@ class MinesweeperBoard(amountOfMines:Int,amountOfRows:Int,amountOfColumns:Int){
                 cell?.resetCell()
             }
         }
+        /*
+        cells.traverse(
+            {element,_,_,_ -> element?.resetCell()}
+            ,null)*/
+
 
         var auxMinesCount = amountOfMines
 
@@ -85,5 +116,9 @@ class MinesweeperBoard(amountOfMines:Int,amountOfRows:Int,amountOfColumns:Int){
                 cell?.updateAroundMinesCount()
             }
         }
+         /*
+        cells.traverse(
+                { element, _, _, _ -> element?.updateAroundMinesCount()}
+        ,null)*/
     }
 }

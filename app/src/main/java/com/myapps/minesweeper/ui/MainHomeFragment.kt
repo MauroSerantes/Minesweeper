@@ -1,4 +1,4 @@
-package com.myapps.minesweeper.gui
+package com.myapps.minesweeper.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -25,11 +25,21 @@ class MainHomeFragment : Fragment() {
     }
 
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initButtonsForSelectionDifficultyMenu()
+        initSelectionDifficultyButtons()
+        setGradientColorTextForPresentationGame()
+    }
 
-        //text colors
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+
+    private fun setGradientColorTextForPresentationGame(){
         setTextViewColor(binding.minesweeperTittleText,
             intArrayOf(ContextCompat.getColor(requireContext(),R.color.yellow),
                 ContextCompat.getColor(requireContext(),R.color.orange),
@@ -38,7 +48,6 @@ class MainHomeFragment : Fragment() {
                 ContextCompat.getColor(requireContext(),R.color.blue),
                 ContextCompat.getColor(requireContext(),R.color.green))
         )
-
         setTextViewColor(binding.tvBeginner,
             intArrayOf(ContextCompat.getColor(requireContext(),R.color.yellow),
                 ContextCompat.getColor(requireContext(),R.color.orange),
@@ -47,7 +56,6 @@ class MainHomeFragment : Fragment() {
                 ContextCompat.getColor(requireContext(),R.color.blue),
                 ContextCompat.getColor(requireContext(),R.color.green))
         )
-
         setTextViewColor(binding.tvMedium,
             intArrayOf(ContextCompat.getColor(requireContext(),R.color.yellow),
                 ContextCompat.getColor(requireContext(),R.color.orange),
@@ -56,7 +64,6 @@ class MainHomeFragment : Fragment() {
                 ContextCompat.getColor(requireContext(),R.color.blue),
                 ContextCompat.getColor(requireContext(),R.color.green))
         )
-
         setTextViewColor(binding.tvAdvanced,
             intArrayOf(ContextCompat.getColor(requireContext(),R.color.yellow),
                 ContextCompat.getColor(requireContext(),R.color.orange),
@@ -65,48 +72,43 @@ class MainHomeFragment : Fragment() {
                 ContextCompat.getColor(requireContext(),R.color.blue),
                 ContextCompat.getColor(requireContext(),R.color.green))
         )
+    }
 
-        //init first screen button functionalities
-        binding.playButton.setOnClickListener{
-            binding.selectionDifficultyLayout.visibility = View.VISIBLE
-            binding.playButton.isEnabled = false
+    private fun initButtonsForSelectionDifficultyMenu(){
+        binding.apply {
+            playButton.setOnClickListener{
+                binding.selectionDifficultyLayout.visibility = View.VISIBLE
+                binding.playButton.isEnabled = false
+            }
+
+            backButton.setOnClickListener{
+                binding.selectionDifficultyLayout.visibility = View.GONE
+                binding.playButton.isEnabled = true
+            }
         }
+    }
 
-
-        // init selection of difficulty and navigation buttons
-        binding.backButton.setOnClickListener{
-            binding.selectionDifficultyLayout.visibility = View.GONE
-            binding.playButton.isEnabled = true
+    private fun initSelectionDifficultyButtons(){
+        binding.apply {
+            beginnerButton.setOnClickListener {
+                val gameDetails = "12,8,20" //the first number is for rows, the second for columns and the last
+                //is for the amount of mines
+                val direction = MainHomeFragmentDirections.actionMainHomeFragmentToGameFragment(gameDetails)
+                findNavController().navigate(direction)
+            }
+            mediumButton.setOnClickListener {
+                val gameDetails = "15,8,30"
+                val direction = MainHomeFragmentDirections.actionMainHomeFragmentToGameFragment(gameDetails)
+                findNavController().navigate(direction)
+            }
+            advancedButton.setOnClickListener {
+                val gameDetails = "20,8,40"
+                val direction = MainHomeFragmentDirections.actionMainHomeFragmentToGameFragment(gameDetails)
+                findNavController().navigate(direction)
+            }
         }
-
-        binding.beginnerButton.setOnClickListener {
-            val gameDetails = "12,8,20" //the first number is for rows, the second for columns and the last
-            //is for the amount of mines
-            val direction = MainHomeFragmentDirections.actionMainHomeFragmentToGameFragment(gameDetails)
-            findNavController().navigate(direction)
-
-        }
-
-        binding.mediumButton.setOnClickListener {
-            val gameDetails = "15,8,30" //the first number is for rows, the second for columns and the last
-            //is for the amount of mines
-            val direction = MainHomeFragmentDirections.actionMainHomeFragmentToGameFragment(gameDetails)
-            findNavController().navigate(direction)
-        }
-
-        binding.advancedButton.setOnClickListener {
-            val gameDetails = "20,8,40" //the first number is for rows, the second for columns and the last
-            //is for the amount of mines
-            val direction = MainHomeFragmentDirections.actionMainHomeFragmentToGameFragment(gameDetails)
-            findNavController().navigate(direction)
-        }
-
     }
 
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 
 }

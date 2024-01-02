@@ -9,7 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="transparent_white">#00FF0000</color>
 
-    <color name="background_color">#90EE90</color>
+
+    <!-- this  is for cells buttons-->
     <color name="background_selection_button">#808080</color>
     <color name="background_button">#C2C2C2</color>
 
@@ -26,6 +27,6 @@
     <!-- this is for the background of presentation-->
 
     <color name="transparent_black">#6B000000</color>
-
+    <color name="gray">#928A8888</color>
 
 </resources>

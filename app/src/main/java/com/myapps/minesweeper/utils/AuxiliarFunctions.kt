@@ -2,12 +2,8 @@ package com.myapps.minesweeper.utils
 
 import android.graphics.LinearGradient
 import android.graphics.Shader
-import android.text.Layout
 import android.text.TextPaint
 import android.widget.TextView
-import androidx.annotation.ColorRes
-import androidx.core.content.ContextCompat
-import androidx.core.content.res.ResourcesCompat
 
 fun setTextViewColor(textView:TextView,listOfColorsIds:IntArray){
     val paint:TextPaint = textView.paint
@@ -17,8 +13,4 @@ fun setTextViewColor(textView:TextView,listOfColorsIds:IntArray){
     textView.paint.shader = shader
     textView.setTextColor(listOfColorsIds[0])
 }
-
-
-
-
 

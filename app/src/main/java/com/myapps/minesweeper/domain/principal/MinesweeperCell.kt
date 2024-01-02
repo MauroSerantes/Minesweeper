@@ -1,6 +1,6 @@
-package com.myapps.minesweeper.principalclasses
+package com.myapps.minesweeper.domain.principal
 
-import com.myapps.minesweeper.auxiliarstructures.Matrix
+import com.myapps.minesweeper.domain.auxiliar.Matrix
 
 
 class MinesweeperCell(associatedMatrix: Matrix<MinesweeperCell>, rowId:Int, columnId:Int){

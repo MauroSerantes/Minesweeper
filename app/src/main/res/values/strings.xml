@@ -10,19 +10,23 @@
     <string name="eight_mine">8</string>
 
 
+    <!-- this is for main home fragment -->
     <string name="minesweeper_title">MINESWEEPER</string>
     <string name="play">PLAY</string>
 
+    <!-- this is for difficulty selection-->
     <string name="beginner">BEGINNER</string>
     <string name="medium">MEDIUM</string>
     <string name="advanced">ADVANCED</string>
 
 
+    <!-- this is for game fragment -->
     <string name="reset_button">RESET</string>
     <string name="amount_of_mines">00</string>
 
 
-    <string name="game_win">WINNER</string>
-    <string name="game_lose">LOSER</string>
+    <!-- this is for win and lose screen-->
+    <string name="game_win">YOU WIN</string>
+    <string name="game_lose">YOU LOSE</string>
 
 </resources>

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainHomeFragment"
-        android:name="com.myapps.minesweeper.gui.MainHomeFragment"
+        android:name="com.myapps.minesweeper.ui.MainHomeFragment"
         android:label="fragment_main_home"
         tools:layout="@layout/fragment_main_home" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
-        android:name="com.myapps.minesweeper.gui.GameFragment"
+        android:name="com.myapps.minesweeper.ui.game.main.GameFragment"
         android:label="GameFragment" >
         <argument android:name="gameDetails"
             app:argType="string" />

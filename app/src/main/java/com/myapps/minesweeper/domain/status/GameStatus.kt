@@ -1,9 +1,9 @@
-package com.myapps.minesweeper.utils
+package com.myapps.minesweeper.domain.status
 
 class GameStatus(amountOfMines:Int){
     // true =  digMode, false = flagMode
     private var digFlagMode:Boolean = true
-    private val maxAmountOfFlags = amountOfMines
+    private var maxAmountOfFlags:Int = amountOfMines
     private var amountOfFlags:Int
     private var gameWin:Boolean
     private var gameLose:Boolean
@@ -33,10 +33,10 @@ class GameStatus(amountOfMines:Int){
            amountOfFlags -= 1
        }
     }
-    fun reset() {
+    fun reset(){
         digFlagMode = true
         gameWin = false
         gameLose = false
+        amountOfFlags = maxAmountOfFlags
     }
-
 }
