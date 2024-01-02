@@ -1,6 +1,6 @@
-# Título del Proyecto
+# Minesweeper Game
 
-_Acá va un párrafo que describa lo que es el proyecto_
+This is a the well know game minesweeper for android
 
 ## Comenzando 🚀
 
