@@ -21,8 +21,7 @@ ADVANCED (160 tiles and 40 mines)
 ```
 #### Here some screeshots of the main presentation of the game
 
-![Screenshot_20240102-112912_Minesweeper](https://github.com/MauroSerantes/Minesweeper/assets/146656323/ae9a92a8-fa10-48f5-a7ee-39cd25b36d68)
-![Screenshot_20240102-112919_Minesweeper](https://github.com/MauroSerantes/Minesweeper/assets/146656323/aa31bbaa-bb33-4e95-b90f-701af8d3428b)
+![Screenshot_20240102-112912_Minesweeper](https://github.com/MauroSerantes/Minesweeper/assets/146656323/ae9a92a8-fa10-48f5-a7ee-39cd25b36d68) ![Screenshot_20240102-112919_Minesweeper](https://github.com/MauroSerantes/Minesweeper/assets/146656323/aa31bbaa-bb33-4e95-b90f-701af8d3428b)
 
 ### Instalación 🔧
 
