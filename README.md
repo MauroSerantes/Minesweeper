@@ -30,6 +30,8 @@ _When Dig Mode is activate you can reveal any cell exept the ones that are marke
 
 _When Flag Mode is activate you can mark or dismark any cell with a flag (The number of flags is equal to the total number of mines)_
 
+_The reset button if for reset the game_
+
 #### Here some screeshots of the main game
 
 ![Screenshot_20240102-112942_Minesweeper](https://github.com/MauroSerantes/Minesweeper/assets/146656323/1dc9d177-4ffd-4b13-b1d8-8708346e6293)
