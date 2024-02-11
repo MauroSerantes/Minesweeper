@@ -18,8 +18,7 @@ MEDIUM (120 tiles and 30 mines)
 ADVANCED (160 tiles and 40 mines)
 ```
 #### Here some screeshots of the main presentation of the game
-![Screenshot_20240102-112912_Minesweeper](https://github.com/MauroSerantes/Minesweeper/assets/146656323/299ab8a4-8f48-4585-ad2e-2b6e83050209)
-![Screenshot_20240102-112919_Minesweeper](https://github.com/MauroSerantes/Minesweeper/assets/146656323/7cf8288c-a2df-47ed-a339-0e3e61fcf594)
+![Screenshot_20240102-112912_Minesweeper](https://github.com/MauroSerantes/Minesweeper/assets/146656323/299ab8a4-8f48-4585-ad2e-2b6e83050209) ![Screenshot_20240102-112919_Minesweeper](https://github.com/MauroSerantes/Minesweeper/assets/146656323/7cf8288c-a2df-47ed-a339-0e3e61fcf594)
 
 
 ### Instructions for play 
