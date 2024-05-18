@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:width="48dp"
-        android:height="48dp">
+        android:width="45dp"
+        android:height="45dp">
         <shape android:shape="rectangle">
             <gradient
                 android:angle="90"
@@ -15,8 +15,8 @@
 
     </item>
     <item
-        android:height="42dp"
-        android:width="42dp">
+        android:height="39dp"
+        android:width="39dp">
         <shape android:shape="rectangle">
             <solid android:color="@color/black" />
             <corners android:radius="2dp" />

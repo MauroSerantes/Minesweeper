@@ -1,7 +1,7 @@
 package com.myapps.minesweeper.ui
 
-import android.os.Bundle
 import androidx.fragment.app.Fragment
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +14,7 @@ import com.myapps.minesweeper.utils.setTextViewColor
 
 class MainHomeFragment : Fragment() {
 
-    private var _binding:FragmentMainHomeBinding ? = null
+    private var _binding: FragmentMainHomeBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,7 +41,8 @@ class MainHomeFragment : Fragment() {
 
     private fun setGradientColorTextForPresentationGame(){
         setTextViewColor(binding.minesweeperTittleText,
-            intArrayOf(ContextCompat.getColor(requireContext(),R.color.yellow),
+            intArrayOf(
+                ContextCompat.getColor(requireContext(), R.color.yellow),
                 ContextCompat.getColor(requireContext(),R.color.orange),
                 ContextCompat.getColor(requireContext(),R.color.red),
                 ContextCompat.getColor(requireContext(),R.color.purple),
@@ -91,18 +92,18 @@ class MainHomeFragment : Fragment() {
     private fun initSelectionDifficultyButtons(){
         binding.apply {
             beginnerButton.setOnClickListener {
-                val gameDetails = "12,8,20" //the first number is for rows, the second for columns and the last
+                val gameDetails = "8,8,10" //the first number is for rows, the second for columns and the last
                 //is for the amount of mines
                 val direction = MainHomeFragmentDirections.actionMainHomeFragmentToGameFragment(gameDetails)
                 findNavController().navigate(direction)
             }
             mediumButton.setOnClickListener {
-                val gameDetails = "15,8,30"
+                val gameDetails = "32,8,40"
                 val direction = MainHomeFragmentDirections.actionMainHomeFragmentToGameFragment(gameDetails)
                 findNavController().navigate(direction)
             }
             advancedButton.setOnClickListener {
-                val gameDetails = "20,8,40"
+                val gameDetails = "60,8,99"
                 val direction = MainHomeFragmentDirections.actionMainHomeFragmentToGameFragment(gameDetails)
                 findNavController().navigate(direction)
             }

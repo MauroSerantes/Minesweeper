@@ -1,9 +1,9 @@
 package com.myapps.minesweeper.ui.game.main
 
+import androidx.fragment.app.Fragment
 import android.content.Context
 import android.graphics.drawable.LayerDrawable
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
