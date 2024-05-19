@@ -75,11 +75,12 @@ class GamePresenter(
         gameStatus.reset()
     }
 
-    private fun checkWinCondition(): Boolean {
+    private fun checkWinCondition(){
         if(gameBoard.allNonMinesCellsRevealed()){
             gameStatus.setGameWin()
+            view?.showWinScreen()
         }
-        return gameStatus.isWin()
+
     }
 
     private fun addRevealedCellsToListOnZeroPressed(position: Position, list: ArrayList<CellData>){
