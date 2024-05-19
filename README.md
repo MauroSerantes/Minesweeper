@@ -18,7 +18,8 @@ MEDIUM (256 tiles and 40 mines)
 ADVANCED (480 tiles and 99 mines)
 ```
 #### Here some screeshots of the main presentation of the game
-![Screenshot_20240102-112912_Minesweeper](https://github.com/MauroSerantes/Minesweeper/assets/146656323/299ab8a4-8f48-4585-ad2e-2b6e83050209) ![Screenshot_20240102-112919_Minesweeper](https://github.com/MauroSerantes/Minesweeper/assets/146656323/7cf8288c-a2df-47ed-a339-0e3e61fcf594)
+![Screenshot_20240519_121926](https://github.com/MauroSerantes/Minesweeper/assets/146656323/70c58d88-7038-415d-899b-d3d4daa6ef06) ![Screenshot_20240519_122002](https://github.com/MauroSerantes/Minesweeper/assets/146656323/6eea5966-9edf-463d-89a9-66aef9a5e78b)
+
 
 
 ### Instructions for play 
@@ -33,8 +34,10 @@ _The reset button if for reset the game_
 
 #### Here some screeshots of the main game
 
-![Screenshot_20240102-112942_Minesweeper](https://github.com/MauroSerantes/Minesweeper/assets/146656323/1dc9d177-4ffd-4b13-b1d8-8708346e6293)
-![Screenshot_20240102-113049_Minesweeper](https://github.com/MauroSerantes/Minesweeper/assets/146656323/79ec230b-7d16-43d8-83c2-cf3e5ce4e48e)
+![Screenshot_20240519_122219](https://github.com/MauroSerantes/Minesweeper/assets/146656323/e9860cb3-1f27-4d50-bf10-0e0d6e0fe3d6) ![Screenshot_20240519_122351](https://github.com/MauroSerantes/Minesweeper/assets/146656323/edf65657-2a68-4465-89e6-b97b3e04205c) ![Screenshot_20240519_122250](https://github.com/MauroSerantes/Minesweeper/assets/146656323/06df6df6-84d4-47d3-a95b-5756ba14a155)
+
+
+
 
 
 
